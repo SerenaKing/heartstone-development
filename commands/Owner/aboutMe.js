@@ -48,7 +48,7 @@ Ghost Recond Wildlands, FiveM, GTA Series
 \`\`\`
 
 Here is some of my media!
-Website: [\`San Andreas life\`](https://salroleplay.net)
+Website: [\`San Andreas Life\`](https://salroleplay.net)
 Instagram: [\`_.Serena_King._\`](https://www.instagram.com/_.serena_king._/)
 Youtube: [\`LanzanedGaming\`](https://www.youtube.com/channel/UC84lNozK-JdfUJkaGJF0CMg)
 
