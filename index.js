@@ -21,12 +21,17 @@ client.categories = fs.readdirSync("./commands/");
     require(`./handler/${handler}`)(client);
 });
 
+const firstMessage = require("./load/first-message.js")
+const verification = require("./load/verification.js")
+
 client.on("ready", () => {
 
     // fs.writeFile('db.txt', JSON.stringify(quickdb.all()), function(e) {
     //     if(e) console.log(e)
     //     console.log('Success!')
     // })
+
+    verification(client)
 
     client.user.setPresence({
 		status: "idle",
