@@ -20,6 +20,7 @@ module.exports = {
         // const banned = db.fetch(`profile.user.ban.${mem.id}`)
         const director = db.fetch(`profile.rank.director.${mem.id}`)
         const supportManager = db.fetch(`profile.rank.supportmanager.${mem.id}`)
+        const supportSenior = db.fetch(`profile.rank.supportsenior.${mem.id}`)
         const supportMember = db.fetch(`profile.rank.supportmember.${mem.id}`)
         const supportJunior = db.fetch(`profile.rank.supportjunior.${mem.id}`)
         const Nitro = db.fetch(`profile.rank.nitro.${mem.id}`)
@@ -37,6 +38,7 @@ If you feel like more data is being stored then is being displayed you may reque
         `
 ❯ HD Director: ${director || "<:NotCheck:911993932873859162>"}
 ❯ Support Manager: ${supportManager || "<:NotCheck:911993932873859162>"}
+❯ Support Senior: ${supportSenior || "<:NotCheck:911993932873859162>"}
 ❯ Support Member: ${supportMember || "<:NotCheck:911993932873859162"}
 ❯ Support Junior: ${supportJunior || "<:NotCheck:911993932873859162"}
 ❯ ${emote.Nitro} Nitro Booster: ${Nitro || "<:NotCheck:911993932873859162"}
@@ -49,6 +51,7 @@ If you feel like more data is being stored then is being displayed you may reque
 
         const director1 = db.fetch(`profile.rank.director.${mentionedMember.id}`)
         const supportManager1 = db.fetch(`profile.rank.supportmanager.${mentionedMember.id}`)
+        const supportSenior1 = db.fetch(`profile.rank.supportsenior.${mentionedMember.id}`)
         const supportMember1 = db.fetch(`profile.rank.supportmember.${mentionedMember.id}`)
         const supportJunior1 = db.fetch(`profile.rank.supportjunior.${mentionedMember.id}`)
         const Nitro1 = db.fetch(`profile.rank.nitro.${mentionedMember.id}`)
@@ -66,6 +69,7 @@ If you feel like more data is being stored then is being displayed you may reque
         `
 ❯ HD Director: ${director1 || "<:NotCheck:911993932873859162>"}
 ❯ Support Manager: ${supportManager1 || "<:NotCheck:911993932873859162>"}
+❯ Support Senior: ${supportSenior1 || "<:NotCheck:911993932873859162>"}
 ❯ Support Member: ${supportMember1 || "<:NotCheck:911993932873859162"}
 ❯ Support Junior: ${supportJunior1 || "<:NotCheck:911993932873859162"}
 ❯ ${emote.Nitro} Nitro Booster: ${Nitro1 || "<:NotCheck:911993932873859162"}

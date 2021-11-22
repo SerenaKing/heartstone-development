@@ -133,10 +133,10 @@ Heartstone Development
     await quickdb.set(`profile.rank.member.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.director.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.supportmanager.${member.id}`, "<:NotCheck:911993932873859162>")
+    await quickdb.set(`profile.rank.supportsenior.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.supportmember.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.supportjunior.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.nitro.${member.id}`, "<:NotCheck:911993932873859162>")
-    await quickdb.set(`profile.rank.member.${member.id}`, "<:Check:911993932928393296>")
 })
 
 client.on('guildMemberUpdate', async (oldMember, newMember) => {
@@ -189,10 +189,10 @@ client.on("guildMemberRemove", async (member) => {
     await quickdb.set(`profile.rank.member.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.director.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.supportmanager.${member.id}`, "<:NotCheck:911993932873859162>")
+    await quickdb.set(`profile.rank.supportsenior.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.supportmember.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.supportjunior.${member.id}`, "<:NotCheck:911993932873859162>")
     await quickdb.set(`profile.rank.nitro.${member.id}`, "<:NotCheck:911993932873859162>")
-    await quickdb.set(`profile.rank.member.${member.id}`, "<:NotCheck:911993932873859162>")
 })
 
 client.login(process.env.TOKEN);
