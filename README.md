@@ -25,6 +25,16 @@ You will need to do the following after you have created your bot / installed no
     4.  Type `npm i` in your terminal once done (This will install all dependencies that are listed in `package.json`)<br>
     5.  Rename the `example.env` file to `.env` and enter your token.<br>
     6.  Try running your bot with `node .`<br>
+
+You might have the question on to what the following piece of code does.
+```
+    // fs.writeFile('db.txt', JSON.stringify(quickdb.all()), function(e) {
+    //     if(e) console.log(e)
+    //     console.log('Success!')
+    // })
+```
+If you remove the `//` from the code you will notice a new file being generated upon the start of the bot.<br>
+This file puts all the entries from the `json.sqlite` into a readable text file.
 <br>
 
 # 2. What am I limited to?

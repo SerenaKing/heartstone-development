@@ -30,7 +30,6 @@ All vehicles will work properly when entering upon your server. It's no more tha
 Having issues? <#911639815722795028> Open a support ticket!
 Want this pack but custom? <#911639815722795028> Open a commission!
 
-
 \`\`\`
 - CVPI
 - Charger
