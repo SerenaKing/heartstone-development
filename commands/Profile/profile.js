@@ -24,6 +24,7 @@ module.exports = {
         const supportMember = db.fetch(`profile.rank.supportmember.${mem.id}`)
         const supportJunior = db.fetch(`profile.rank.supportjunior.${mem.id}`)
         const Nitro = db.fetch(`profile.rank.nitro.${mem.id}`)
+        const VIP = db.fetch(`profile.rank.vip.${mem.id}`)
         const Member = db.fetch(`profile.rank.member.${mem.id}`)
 
         const main = new Discord.MessageEmbed()
@@ -31,8 +32,21 @@ module.exports = {
         main.setColor(color.blue)
         main.setThumbnail(message.author.displayAvatarURL())
         main.setDescription(`
-This is all information that is currently being logged by the Heartstone Development (SAL) Database.
-If you feel like more data is being stored then is being displayed you may request a data insight.
+Heartstone Development checks somethings on your profle! Some of these include the following!
+
+\`\`\`
+- Discord ID
+- Profile Picture
+- Creation / Join Date
+- Messages Send
+
+- Badges
+\`\`\`
+
+There could be more after this message was posted! This list will update accordingly!
+If you want to see all information we have on you you can always request it!
+
+- Regards!
         `)
         main.addField(`❯ | Profile Status`,
         `
@@ -42,6 +56,7 @@ If you feel like more data is being stored then is being displayed you may reque
 ❯ Support Member: ${supportMember || "<:NotCheck:911993932873859162"}
 ❯ Support Junior: ${supportJunior || "<:NotCheck:911993932873859162"}
 ❯ ${emote.Nitro} Nitro Booster: ${Nitro || "<:NotCheck:911993932873859162"}
+❯ VIP: ${VIP || "<:NotCheck:911993932873859162"}
 ❯ ${emote.Player} Member: ${Member || "<:NotCheck:911993932873859162"}
         `)
         main.setFooter(message.author.tag, message.author.displayAvatarURL())
@@ -55,6 +70,7 @@ If you feel like more data is being stored then is being displayed you may reque
         const supportMember1 = db.fetch(`profile.rank.supportmember.${mentionedMember.id}`)
         const supportJunior1 = db.fetch(`profile.rank.supportjunior.${mentionedMember.id}`)
         const Nitro1 = db.fetch(`profile.rank.nitro.${mentionedMember.id}`)
+        const VIP1 = db.fetch(`profile.rank.member.${mentionedMember.id}`)
         const Member1 = db.fetch(`profile.rank.member.${mentionedMember.id}`)
 
         const extra = new Discord.MessageEmbed()
@@ -62,18 +78,32 @@ If you feel like more data is being stored then is being displayed you may reque
         extra.setColor(color.blue)
         extra.setThumbnail(mentionedMember.user.displayAvatarURL())
         extra.setDescription(`
-This is all information that is currently being logged by the Heartstone Development (SAL) Database.
-If you feel like more data is being stored then is being displayed you may request a data insight.
+Heartstone Development checks somethings on your profle! Some of these include the following!
+
+\`\`\`
+- Discord ID
+- Profile Picture
+- Creation / Join Date
+- Messages Send
+        
+- Badges
+\`\`\`
+        
+There could be more after this message was posted! This list will update accordingly!
+If you want to see all information we have on you you can always request it!
+        
+- Regards!
         `)
         extra.addField(`❯ | Profile Status`,
         `
 ❯ HD Director: ${director1 || "<:NotCheck:911993932873859162>"}
 ❯ Support Manager: ${supportManager1 || "<:NotCheck:911993932873859162>"}
 ❯ Support Senior: ${supportSenior1 || "<:NotCheck:911993932873859162>"}
-❯ Support Member: ${supportMember1 || "<:NotCheck:911993932873859162"}
-❯ Support Junior: ${supportJunior1 || "<:NotCheck:911993932873859162"}
-❯ ${emote.Nitro} Nitro Booster: ${Nitro1 || "<:NotCheck:911993932873859162"}
-❯ ${emote.Player} Member: ${Member1 || "<:NotCheck:911993932873859162"}
+❯ Support Member: ${supportMember1 || "<:NotCheck:911993932873859162>"}
+❯ Support Junior: ${supportJunior1 || "<:NotCheck:911993932873859162>"}
+❯ ${emote.Nitro} Nitro Booster: ${Nitro1 || "<:NotCheck:911993932873859162>"}
+❯ VIP: ${VIP1 || "<:NotCheck:911993932873859162>"}
+❯ ${emote.Player} Member: ${Member1 || "<:NotCheck:911993932873859162>"}
         `)
         extra.setFooter(mentionedMember.user.tag, mentionedMember.user.displayAvatarURL())
         extra.setTimestamp()

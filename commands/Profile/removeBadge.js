@@ -75,9 +75,14 @@ The system has failed. Make sure that you mentioned a user by @ / ID & That the 
             message.channel.send(msgEmbed)
             await db.set(`profile.rank.nitro.${mentionedUser.user.id}`, `<:NotCheck:911993932873859162>`)
             loggingChannel.send(loggingEmbed)
+        } else if (badge == "VIP") {
+            message.channel.send(msgEmbed)
+            await db.set(`profile.rank.vip.${mentionedUser.user.id}`, `<:NotCheck:911993932873859162>`)
+            loggingChannel.send(loggingEmbed)
         } else if (badge == "Member") {
             message.channel.send(msgEmbed)
-            await db.set(`profile.rank.member.${mentionedUser.user.id}`)
+            await db.set(`profile.rank.member.${mentionedUser.user.id}`, `<:NotCheck:911993932873859162>`)
+            loggingChannel.send(loggingEmbed)
         } else {
             message.channel.send(failEmbed)
         }
