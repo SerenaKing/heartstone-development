@@ -11,7 +11,7 @@ module.exports = {
     run: async (client, message, args) => {
         message.delete()
 
-        const mentionedUser = message.mentions.members.first()
+        const mentionedUser = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 
         const loggingChannel = message.guild.channels.cache.get("912235074722856960")
 
@@ -78,7 +78,7 @@ The system has failed. Make sure that you mentioned a user by @ / ID & That the 
         } else if (badge == "VIP") {
             message.channel.send(msgEmbed)
             await db.set(`profile.rank.vip.${mentionedUser.user.id}`, "<:Check:911993932928393296>")
-            loggingChannel.send(loggingChannel)
+            loggingChannel.send(loggingEmbed)
         } else if (badge == "Member") {
             message.channel.send(msgEmbed)
             await db.set(`profile.rank.member.${mentionedUser.user.id}`, `<:Check:911993932928393296>`)

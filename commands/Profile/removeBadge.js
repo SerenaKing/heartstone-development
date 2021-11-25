@@ -11,7 +11,7 @@ module.exports = {
     run: async (client, message, args) => {
         message.delete()
 
-        const mentionedUser = message.mentions.members.first()
+        const mentionedUser = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 
         const loggingChannel = message.guild.channels.cache.get("912235074722856960")
 
