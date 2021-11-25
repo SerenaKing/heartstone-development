@@ -144,8 +144,13 @@ client.on('guildMemberUpdate', async (oldMember, newMember) => {
 
     const color = require("./config/color.json")
 
-	const notBoosting = oldMember.roles.cache.find(role => role.name === 'Nitro Booster');
-	const isBoosting = newMember.roles.cache.find(role => role.name === 'Nitro Booster');
+    if (oldMember.user.bot)
+        return
+    if (newMember.user.bot)
+        return
+
+	const notBoosting = oldMember.roles.cache.find(role => role.name === 'Server Booster');
+	const isBoosting = newMember.roles.cache.find(role => role.name === 'Server Booster');
 	
 	const BoosterEmbed = new MessageEmbed()
 		.setTitle(`${newMember.user.tag} Thank You!`)
@@ -174,13 +179,11 @@ Heartstone Development
 		.setTimestamp()
 
 	if (!notBoosting) {
-        oldMember.guild.channels.cache.get("911922928973664266").send(`${oldMember.user.tag} - Has stopped boosting the server...`)
         await quickdb.set(`profile.rank.booster.${oldMember.user.id}`, "<:NotCheck:911993932873859162>")
 	}
 
     if (isBoosting) {
         newMember.guild.channels.cache.get('911920103367520268').send(`<@!${newMember.user.id}>`, {embed: BoosterEmbed})
-            .then(newMember.guild.channels.cache.get("911922928973664266").send(`<@!${newMember.user.id}> - Has started boosting the server!`))
         await quickdb.set(`profile.rank.booster.${newMember.user.id}`, "<:Check:911993932928393296>")
     }
 
