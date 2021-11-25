@@ -13,6 +13,8 @@ module.exports = {
 
         message.delete()
 
+        const mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0])
+
         const pEmbed = new MessageEmbed()
             .setTitle(`Heartstone Development | Review Us!`)
             .setColor(color.blue)
